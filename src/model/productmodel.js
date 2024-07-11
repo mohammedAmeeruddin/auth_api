@@ -3,6 +3,7 @@ const productSchema =mongoose.Schema({
     brandname:String,
     discription:String,
     prise:Number,
+    userid:String,
     rating:Number
 });
 
