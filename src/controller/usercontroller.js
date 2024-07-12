@@ -23,7 +23,7 @@ exports.loginUser=async(req,res)=>{
         if(!email || !password){
           return  res.status(404).json({message:"please check the given details"}); };
         const userExist=await User.findOne({email});
-        if(!userExist){return req.status(404).json({message:"opps! no user"})};
+        if(!userExist){return res.status(404).json({message:"opps! no user"})};
         if(userExist.password=!password){ return res.status(404).json({message:"invalid credintel"})};
         const id =userExist._id;
         const token = jwt.sign({id},"amdgjkf@#&njkhk")
