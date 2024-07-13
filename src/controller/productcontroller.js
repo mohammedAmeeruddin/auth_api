@@ -40,7 +40,7 @@ exports.updateProduct=async(req,res)=>{
 
 exports.deleteProduct=async(req,res)=>{
     try {
-        const {id} =req.query;
+        const id =req.user;
         await product.findByIdAndDelete(id);
         return res.status(200).json({message:"product deleted sucessfully"});
     } catch (error) {res.status(500).json({message:error.message});};
