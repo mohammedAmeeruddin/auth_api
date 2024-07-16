@@ -1,5 +1,6 @@
 const User =require("../model/usermodel");
 const jwt =require("jsonwebtoken");
+const JWT_STRING=require("../constants");
 
 exports.authmiddleware=async(req,res,next)=>{
 try { 
