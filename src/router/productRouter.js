@@ -5,7 +5,7 @@ const Router=express.Router();
 Router.post("/create/product",authmiddleware,createProduct);
 Router.get("/get/products",authmiddleware,getAllProducts);
 Router.put("/updateproduct",authmiddleware,updateProduct);
-Router.delete("/deleteproduct",deleteProduct)
+Router.delete("/deleteproduct/:id",authmiddleware,deleteProduct)
 
 
 module.exports=Router;

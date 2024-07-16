@@ -6,7 +6,7 @@ try {
     const {token}=req.headers;
 if(!token){res.status(404).json({message:"invalid token"});};
 
-const {id}=await jwt.verify(token,"amdgjkf@#&njkhk");
+const {id}=await jwt.verify(token,JWT_STRING);
 const user =await User.findById(id);
 if(!user){res.status(404).json({message:"user not found"});};
 req.user = user.id;

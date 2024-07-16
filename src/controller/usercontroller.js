@@ -26,7 +26,7 @@ exports.loginUser=async(req,res)=>{
         if(!userExist){return res.status(404).json({message:"opps! no user"})};
         if(userExist.password=!password){ return res.status(404).json({message:"invalid credintel"})};
         const id =userExist._id;
-        const token = jwt.sign({id},"amdgjkf@#&njkhk")
+        const token = jwt.sign({id},JWT_STRING);
        return res.status(200).json({message:"login sucessfully",token});
         
     } catch (error) {res.status(500).json({message:error.message}); };
