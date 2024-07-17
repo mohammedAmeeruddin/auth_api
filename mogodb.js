@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const { MONGO_URL } = require("./src/constants");
+const { MONGO_URL } = require("./data.json");
 exports.connectDB =async()=>{
     mongoose
     .connect(MONGO_URL)

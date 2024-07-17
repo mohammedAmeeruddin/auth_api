@@ -1,6 +1,6 @@
 const User =require("../model/usermodel");
 const jwt =require("jsonwebtoken");
-const {JWT_STRING}=require("../constants");
+const {JWT_STRING}=require("../../data.json");
 
 exports.signUpuser=async(req,res)=>{
     try {
